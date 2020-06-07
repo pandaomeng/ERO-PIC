@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { message } from 'antd';
 import { getThumb, Picture } from './service';
 import { GalleryStyle, ContentWrapper, CardWrapper } from './style';
 
@@ -12,9 +13,13 @@ const Gallery = () => {
   const [pictureList, setPictureList] = useState<Picture[]>([]);
 
   useEffect(() => {
-    getThumb(orderType, page, isR18).then(res => {
-      setPictureList(res.thumbs);
-    });
+    getThumb(orderType, page, isR18)
+      .then(res => {
+        setPictureList(res.thumbs);
+      }).catch(error => {
+        console.log('error.message :>> ', error.message);
+        message.error(error.message);
+      });
   }, []);
 
   return (
