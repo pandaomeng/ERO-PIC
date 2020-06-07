@@ -13,7 +13,7 @@ const Gallery = () => {
 
   useEffect(() => {
     getThumb(orderType, page, isR18).then(res => {
-      setPictureList(res.data.data.thumbs);
+      setPictureList(res.thumbs);
     });
   }, []);
 

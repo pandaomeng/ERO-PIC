@@ -1,4 +1,4 @@
-import instance from '../../utils/axios';
+import axios from '../../utils/axios';
 
 export interface Picture {
   picture_id: string;
@@ -8,5 +8,5 @@ export interface Picture {
 
 export const getThumb = (orderType: string, page: number, isR = false): any => {
   const url = isR ? 'R18thumbList' : 'thumbList';
-  return instance(`api/${url}/${orderType}/${page}`);
+  return axios(`api/${url}/${orderType}/${page}`);
 };
