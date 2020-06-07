@@ -1,14 +1,14 @@
 module.exports = {
+  parser: "@typescript-eslint/parser",
   env: {
     browser: true,
     es6: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['plugin:react/recommended', 'airbnb', 'prettier/@typescript-eslint'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -23,7 +23,7 @@ module.exports = {
       },
     },
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ["@typescript-eslint", 'react', '@typescript-eslint'],
   rules: {
     'import/extensions': [
       'error',
@@ -36,8 +36,8 @@ module.exports = {
     ],
     'import/no-extraneous-dependencies': 'off',
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
     'arrow-parens': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
   },
 };
