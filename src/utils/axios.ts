@@ -1,7 +1,7 @@
 import axios from 'axios';
 import cookie from 'react-cookies';
 
-const token = cookie.load('userToken');
+const token: string = cookie.load('userToken');
 const instance = axios.create({
   baseURL: 'https://img.kanata.moe/',
   timeout: 1000000,
