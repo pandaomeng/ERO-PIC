@@ -44,6 +44,8 @@ module.exports = {
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
     'arrow-parens': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
+    'import/prefer-default-export': 0,
+    camelcase: 0,
   },
   overrides: [
     {

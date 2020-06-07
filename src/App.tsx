@@ -5,7 +5,7 @@ import router from './router';
 const App = () => (
   <BrowserRouter>
     <Switch>
-      {router.map(each => <Route exact path={each.path} component={each.component} />)}
+      {router.map(each => <Route key={each.path} exact path={each.path} component={each.component} />)}
     </Switch>
   </BrowserRouter>
 );
