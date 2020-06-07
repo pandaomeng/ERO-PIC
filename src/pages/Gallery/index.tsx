@@ -8,7 +8,7 @@ type OrderType = 'default' | 'score' | 'time'
 const Gallery = () => {
   const [isR18, setIsR18] = useState(false);
   const [page, setPage] = useState(1);
-  const [orderType, setOrderType] = useState<'default'>('default');
+  const [orderType, setOrderType] = useState<OrderType>('default');
   const [pictureList, setPictureList] = useState<Picture[]>([]);
 
   useEffect(() => {
