@@ -32,6 +32,7 @@ const options: webpackDevServer.Configuration = {
   },
   disableHostCheck: true,
   sockPort: env.PORT,
+  historyApiFallback: true,
 };
 webpackDevServer.addDevServerEntrypoints(devConfig, options);
 

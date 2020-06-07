@@ -1,5 +1,13 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import router from './router';
 
-const App = () => <div>Hello world</div>;
+const App = () => (
+  <BrowserRouter>
+    <Switch>
+      {router.map(each => <Route exact path={each.path} component={each.component} />)}
+    </Switch>
+  </BrowserRouter>
+);
 
 export default App;
