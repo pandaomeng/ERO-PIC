@@ -1,0 +1,58 @@
+{
+  "name": "ERO-PIC",
+  "version": "1.0.0",
+  "description": "涩图站",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node dev-server.ts",
+    "build": "TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandaomeng/ERO-PIC.git"
+  },
+  "keywords": [],
+  "author": "pandaomeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pandaomeng/ERO-PIC/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
+    "@types/webpack": "^4.41.12",
+    "@types/webpack-dev-server": "^3.10.1",
+    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/parser": "^2.30.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-webpack": "^0.12.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "prettier": "^2.0.5",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^7.0.2",
+    "ts-node": "^8.9.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "moment": "^2.25.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "uuid": "^8.0.0"
+  },
+  "homepage": "https://github.com/pandaomeng/ERO-PIC#readme"
+}
