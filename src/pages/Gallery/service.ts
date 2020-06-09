@@ -8,5 +8,5 @@ export interface Picture {
 
 export const getThumb = (orderType: string, page: number, isR = false): any => {
   const url = isR ? 'R18thumbList' : 'thumbList';
-  return axios(`api/${url}/${orderType}/${page}`);
+  return axios(`/api/${url}/${orderType}/${page}`);
 };
