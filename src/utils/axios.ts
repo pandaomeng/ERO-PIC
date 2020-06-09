@@ -3,7 +3,7 @@ import cookie from 'react-cookies';
 
 const token: string = cookie.load('userToken');
 const instance = Axios.create({
-  baseURL: 'https://img.kanata.moe/',
+  baseURL: 'http://localhost:3001/',
   timeout: 1000000,
   headers: {
     'X-Requested-With': 'XMLHttpRequest',

@@ -4,7 +4,7 @@ import { message } from 'antd';
 import { getThumb, Picture } from './service';
 import { GalleryStyle, ContentWrapper, CardWrapper } from './style';
 
-type OrderType = 'default' | 'score' | 'time'
+type OrderType = 'default' | 'score' | 'time';
 
 const Gallery = () => {
   const [isR18, setIsR18] = useState(false);
@@ -16,7 +16,8 @@ const Gallery = () => {
     getThumb(orderType, page, isR18)
       .then(res => {
         setPictureList(res.thumbs);
-      }).catch(error => {
+      })
+      .catch(error => {
         console.log('error.message :>> ', error.message);
         message.error(error.message);
       });
@@ -25,9 +26,9 @@ const Gallery = () => {
   return (
     <GalleryStyle>
       <ContentWrapper>
-        {pictureList.map((picture) => (
+        {pictureList.map(picture => (
           <CardWrapper key={picture.picture_id}>
-            <Link to="/picture">
+            <Link to={`/picture/${picture.picture_id}`}>
               <div className="card">
                 <img src={picture.thumb_dir} alt="loading" />
                 <p>{picture.total_score}</p>

@@ -4,7 +4,7 @@ import Picture from './pages/Picture';
 
 interface SingleRoute {
   path: string;
-  component: ComponentType
+  component: ComponentType;
 }
 
 const router: SingleRoute[] = [
