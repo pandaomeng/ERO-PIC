@@ -43,6 +43,9 @@ const config: webpack.Configuration = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      utils: path.resolve(__dirname, 'src/utils'),
+    },
   },
   plugins: [
     new CleanWebpackPlugin(),
