@@ -3,24 +3,22 @@ import React, { useState, useEffect, FC } from 'react';
 import { Tag, Slider, Button } from 'antd';
 import Moment from 'moment';
 import { Content, PictureWrapper, Block } from './style';
-import getPicture from './service';
+import { getPicture, PictureInfo } from './service';
 
 type Props = RouteComponentProps<{ id: string }>;
 
 const Picture: FC<Props> = () => {
   const { id } = useParams();
-  const [pic, setPic] = useState({});
+  const [pictureInfo, setPicture] = useState<PictureInfo>(Object);
 
   useEffect(() => {
-    getPicture(id).then(res => setPic(res.data.data));
+    getPicture(id).then(res => setPicture(res.data.data));
   }, []);
 
-  if (pic.picture) {
-    const { picture, scores, tags } = pic;
-  }
+  const { picture, tags, scores } = pictureInfo;
 
   return (
-    <div>div</div>
+    <div>{picture.picture_dir}idv</div>
     // <Content>
     //   <PictureWrapper>
     //     <img src={picture.picture.picture_id} alt="loading" />
