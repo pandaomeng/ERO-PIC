@@ -19,6 +19,7 @@ const Gallery = () => {
         setPictureList(res.thumbs);
       })
       .catch(error => {
+        console.log('error.message :>> ', error.message);
         message.error(error.message);
       });
   }, []);
@@ -29,7 +30,7 @@ const Gallery = () => {
       <ContentWrapper>
         {pictureList.map(picture => (
           <CardWrapper key={picture.picture_id}>
-            <Link to="/picture">
+            <Link to={`/picture/${picture.picture_id}`}>
               <div className="card">
                 <img src={picture.thumb_dir} alt="loading" />
               </div>

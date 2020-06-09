@@ -4,7 +4,7 @@ import baseUrl from '../../base-url';
 
 const token: string = cookie.load('userToken');
 const instance = Axios.create({
-  baseURL: baseUrl,
+  baseURL: 'http://localhost:3001/',
   timeout: 1000000,
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
