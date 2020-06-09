@@ -1,15 +1,13 @@
 import axios from '../../utils/axios';
 
-export interface PictureInfo {
-  picture: {
-    picture_dir: string;
-    total_score: number;
-    create_by: number;
-    create_time: number;
-    r18: boolean;
-  };
-  [index: number]: Score;
-  [index: number]: Tag;
+export interface Picture {
+  picture_dir: string;
+  total_score: number;
+  create_by: number;
+  create_time: number;
+  r18: boolean;
+  scores: Score[];
+  tags: Tag[]
 }
 
 interface Score {
