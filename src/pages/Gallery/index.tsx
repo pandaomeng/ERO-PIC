@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { message } from 'antd';
 import { getThumb, Picture } from './service';
 import { GalleryStyle, ContentWrapper, CardWrapper } from './style';
+import Audio from './components/Audio';
 
 type OrderType = 'default' | 'score' | 'time';
 
@@ -18,13 +19,13 @@ const Gallery = () => {
         setPictureList(res.thumbs);
       })
       .catch(error => {
-        console.log('error.message :>> ', error.message);
         message.error(error.message);
       });
   }, []);
 
   return (
     <GalleryStyle>
+      <Audio />
       <ContentWrapper>
         {pictureList.map(picture => (
           <CardWrapper key={picture.picture_id}>
