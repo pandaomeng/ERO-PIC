@@ -8,19 +8,20 @@ export interface PictureInfo {
     create_time: number;
     r18: boolean;
   };
-  [index: number]: Score;
-  [index: number]: Tag;
+  scores: Score[];
+  tags: Tag[];
 }
 
 interface Score {
   score_id: number;
   score: number;
   create_by: number;
+  create_time: number;
 }
 
 interface Tag {
   tag_id: number;
-  tag: string;
+  tag: number;
   create_by: number;
 }
 

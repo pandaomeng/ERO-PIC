@@ -9,10 +9,10 @@ type Props = RouteComponentProps<{ id: string }>;
 
 const Picture: FC<Props> = () => {
   const { id } = useParams();
-  const [pictureInfo, setPicture] = useState<PictureInfo>(Object);
+  const [pictureInfo, setPictureInfo] = useState<PictureInfo>(Object);
 
   useEffect(() => {
-    getPicture(id).then(res => setPicture(res.data.data));
+    getPicture(id).then(res => setPictureInfo(res.data.data));
   }, []);
 
   const { picture, tags, scores } = pictureInfo;
