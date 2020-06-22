@@ -1,12 +1,17 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "outDir": "./dist",
     "module": "commonjs",
     "allowJs": true,
     "jsx": "react",
     "strict": true,
     "noImplicitAny": false,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./",
+    "paths": {
+      "utils/*": ["./src/utils/*"],
+    }
   },
 }
