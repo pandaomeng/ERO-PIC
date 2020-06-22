@@ -5,7 +5,7 @@ import { getThumb, Picture } from './service';
 import { GalleryStyle, ContentWrapper, CardWrapper } from './style';
 import Audio from './components/Audio';
 
-type OrderType = 'default' | 'score' | 'time'
+type OrderType = 'default' | 'score' | 'time';
 
 const Gallery = () => {
   const [isR18, setIsR18] = useState(false);
@@ -17,7 +17,8 @@ const Gallery = () => {
     getThumb(orderType, page, isR18)
       .then(res => {
         setPictureList(res.thumbs);
-      }).catch(error => {
+      })
+      .catch(error => {
         message.error(error.message);
       });
   }, []);
@@ -26,7 +27,7 @@ const Gallery = () => {
     <GalleryStyle>
       <Audio />
       <ContentWrapper>
-        {pictureList.map((picture) => (
+        {pictureList.map(picture => (
           <CardWrapper key={picture.picture_id}>
             <Link to="/picture">
               <div className="card">

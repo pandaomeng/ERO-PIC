@@ -1,3 +1,5 @@
+const prettierOptions = require('./.prettierrc');
+
 module.exports = {
   parser: '@typescript-eslint/parser',
   env: {
@@ -24,12 +26,13 @@ module.exports = {
   settings: {
     'import/resolver': {
       webpack: {
-        config: './webpack.config.ts',
+        config: './webpack.config.js',
       },
     },
   },
   plugins: ['@typescript-eslint', 'prettier', 'react'],
   rules: {
+    'prettier/prettier': ['error', prettierOptions],
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -53,6 +56,12 @@ module.exports = {
       rules: {
         'react/prop-types': 0,
         '@typescript-eslint/explicit-module-boundary-types': 0,
+      },
+    },
+    {
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
       },
     },
   ],

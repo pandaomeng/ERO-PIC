@@ -1,11 +1,11 @@
-import path from 'path';
-import webpack from 'webpack';
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const env = require('./env.js');
 
 const fileExtensions = ['jpg', 'jpeg', 'png', 'gif', 'eot', 'otf', 'svg', 'ttf', 'woff', 'woff2'];
 
-const config: webpack.Configuration = {
+module.exports = {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   entry: {
@@ -56,6 +56,8 @@ const config: webpack.Configuration = {
       favicon: path.join(__dirname, 'public', 'favicon.png'),
     }),
   ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    port: env.PORT,
+  },
 };
-
-export default config;
