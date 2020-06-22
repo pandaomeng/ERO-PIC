@@ -7,10 +7,10 @@ module.exports = {
     es6: true,
   },
   extends: [
-    'plugin:react/recommended',
     'airbnb',
-    'prettier/@typescript-eslint',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
   ],
   globals: {
     Atomics: 'readonly',
@@ -42,27 +42,26 @@ module.exports = {
         js: 'never',
       },
     ],
-    'import/no-extraneous-dependencies': 'off',
-    'no-unused-vars': 'off',
-    'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
     'arrow-parens': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/prefer-default-export': 'off',
+    'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
+    'react/jsx-one-expression-per-line': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
-    'import/prefer-default-export': 0,
-    'react/jsx-one-expression-per-line': 0,
-    camelcase: 0,
+    camelcase: 'off',
   },
   overrides: [
-    {
-      files: ['*.tsx'],
-      rules: {
-        'react/prop-types': 0,
-        '@typescript-eslint/explicit-module-boundary-types': 0,
-      },
-    },
     {
       files: ['*.js'],
       rules: {
         '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+    {
+      files: ['*.tsx'],
+      rules: {
+        'react/prop-types': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
       },
     },
   ],
