@@ -48,6 +48,7 @@ module.exports = {
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
     'react/jsx-one-expression-per-line': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
+    'object-curly-newline': 'off',
     camelcase: 'off',
   },
   overrides: [
