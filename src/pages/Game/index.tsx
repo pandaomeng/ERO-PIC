@@ -119,40 +119,43 @@ const Game = () => {
   };
 
   return (
-    <>
-      <div style={{ position: 'relative' }}>
-        <canvas id="board" width={BOARD_WIDTH} height={BOARD_WIDTH} />
-        {pieces.map(piece => {
-          const { id, i, j, status } = piece;
-          const x = BOARD_WIDTH / 2 - perWidth * i + j * step - RADIUS;
-          const y = i * perHeight - RADIUS;
+    <div style={{ margin: '20px', textAlign: 'center' }}>
+      <div>游戏目标：点击棋子使棋盘上最终只有一个棋子</div>
+      <div style={{ width: BOARD_WIDTH, height: 500, margin: '50px auto', textAlign: 'center' }}>
+        <div style={{ position: 'relative' }}>
+          <canvas id="board" width={BOARD_WIDTH} height={BOARD_WIDTH} />
+          {pieces.map(piece => {
+            const { id, i, j, status } = piece;
+            const x = BOARD_WIDTH / 2 - perWidth * i + j * step - RADIUS;
+            const y = i * perHeight - RADIUS;
 
-          const color = colorMapping[status];
+            const color = colorMapping[status];
 
-          return (
-            <svg
-              key={id}
-              width={RADIUS * 2}
-              height={RADIUS * 2}
-              style={{ position: 'absolute', top: y, left: x }}
-              onClick={() => handleClick(piece)}
-            >
-              <circle
-                cx={RADIUS}
-                cy={RADIUS}
-                r={RADIUS}
-                stroke="black"
-                style={{ fill: color, strokeWidth: 0 }}
-              />
-            </svg>
-          );
-        })}
+            return (
+              <svg
+                key={id}
+                width={RADIUS * 2}
+                height={RADIUS * 2}
+                style={{ position: 'absolute', top: y, left: x }}
+                onClick={() => handleClick(piece)}
+              >
+                <circle
+                  cx={RADIUS}
+                  cy={RADIUS}
+                  r={RADIUS}
+                  stroke="black"
+                  style={{ fill: color, strokeWidth: 0 }}
+                />
+              </svg>
+            );
+          })}
+        </div>
+        <div>{message}</div>
+        <button type="button" onClick={resetGame}>
+          重新开始游戏
+        </button>
       </div>
-      <div>{message}</div>
-      <button type="button" onClick={resetGame}>
-        重新开始游戏
-      </button>
-    </>
+    </div>
   );
 };
 
