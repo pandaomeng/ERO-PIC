@@ -1,16 +1,21 @@
 import { ComponentType } from 'react';
 import Gallery from './pages/Gallery';
 import Picture from './pages/Picture';
+import Game from './pages/Game';
 
 interface SingleRoute {
   path: string;
-  component: ComponentType
+  component: ComponentType;
 }
 
 const router: SingleRoute[] = [
+  // {
+  //   path: '/',
+  //   component: Gallery,
+  // },
   {
     path: '/',
-    component: Gallery,
+    component: Game,
   },
   {
     path: '/picture/:id',

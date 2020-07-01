@@ -25,7 +25,7 @@ const Gallery = () => {
 
   return (
     <GalleryStyle>
-      <Audio />
+      {/* <Audio /> */}
       <ContentWrapper>
         {pictureList.map(picture => (
           <CardWrapper key={picture.picture_id}>

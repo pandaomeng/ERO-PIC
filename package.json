@@ -4,8 +4,8 @@
   "description": "涩图站",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node dev-server.ts",
-    "build": "TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack",
+    "start": "webpack-dev-server --open",
+    "build": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
