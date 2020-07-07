@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-// import topBack from '../../images/topback.png';
-// import logo from '../../images/logo.png';
+import topBack from '../../images/topback.png';
+import logo from '../../images/logo.png';
 
 export const Footer = styled.footer`
   position: relative;
@@ -34,7 +34,7 @@ export const Footer = styled.footer`
       top: -55px;
       left: 50%;
       margin-left: -72px;
-      /* background-image: url(%[topBack}); */
+      background-image: url(${topBack});
       width: 154px;
       height: 94px;
       overflow: hidden;
@@ -45,7 +45,7 @@ export const Footer = styled.footer`
 `;
 
 export const Logo = styled.a`
-  /* background-image: url(%[logo}); */
+  background-image: url(${logo});
   background-size: contain;
   width: 330px;
   height: 110px;

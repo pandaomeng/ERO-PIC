@@ -4,6 +4,7 @@ import { message } from 'antd';
 import { getThumb, Picture } from './service';
 import { GalleryStyle, ContentWrapper, CardWrapper } from './style';
 import Audio from './components/Audio';
+import Footer from '../../components/Footer';
 
 type OrderType = 'default' | 'score' | 'time';
 
@@ -24,21 +25,24 @@ const Gallery = () => {
   }, []);
 
   return (
-    <GalleryStyle>
-      {/* <Audio /> */}
-      <ContentWrapper>
-        {pictureList.map(picture => (
-          <CardWrapper key={picture.picture_id}>
-            <Link to="/picture">
-              <div className="card">
-                <img src={picture.thumb_dir} alt="loading" />
-              </div>
-              <p>{picture.total_score}</p>
-            </Link>
-          </CardWrapper>
-        ))}
-      </ContentWrapper>
-    </GalleryStyle>
+    <>
+      <GalleryStyle>
+        {/* <Audio /> */}
+        <ContentWrapper>
+          {pictureList.map(picture => (
+            <CardWrapper key={picture.picture_id}>
+              <Link to="/picture">
+                <div className="card">
+                  <img src={picture.thumb_dir} alt="loading" />
+                </div>
+                <p>{picture.total_score}</p>
+              </Link>
+            </CardWrapper>
+          ))}
+        </ContentWrapper>
+      </GalleryStyle>
+      <Footer />
+    </>
   );
 };
 
