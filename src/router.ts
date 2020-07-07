@@ -9,12 +9,12 @@ interface SingleRoute {
 }
 
 const router: SingleRoute[] = [
-  // {
-  //   path: '/',
-  //   component: Gallery,
-  // },
   {
     path: '/',
+    component: Gallery,
+  },
+  {
+    path: '/game',
     component: Game,
   },
   {
