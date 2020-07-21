@@ -54,7 +54,7 @@
   "dependencies": {
     "antd": "^4.3.2",
     "axios": "^0.19.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "moment": "^2.25.1",
     "react": "^16.13.1",
     "react-aplayer": "^1.0.0",
