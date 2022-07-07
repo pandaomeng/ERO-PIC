@@ -55,7 +55,7 @@
     "antd": "^4.3.2",
     "axios": "^0.19.2",
     "lodash": "^4.17.15",
-    "moment": "^2.25.1",
+    "moment": "^2.29.4",
     "react": "^16.13.1",
     "react-aplayer": "^1.0.0",
     "react-cookies": "^0.1.1",
